@@ -26,5 +26,7 @@
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
-  }
+  },
+  "repository": "https://github.com/tvaditya/React-01.git",
+  "author": "tvaditya <tvaditya@gmail.com>"
 }
