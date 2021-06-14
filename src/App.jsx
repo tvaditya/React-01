@@ -1,6 +1,6 @@
 import './styles/global.scss';
-import {RespositoryList} from "../components/RepositoryList";
-import {Counter} from "../components/Counter";
+import {RespositoryList} from "./components/RepositoryList";
+import {Counter} from "./components/Counter";
 
 export function App() {
 
