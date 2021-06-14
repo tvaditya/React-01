@@ -1,6 +1,7 @@
 import {RepositoryItem} from "./RepositoryItem";
 
 import '../styles/repositories.scss';
+import {useState, useEffect} from "react";
 
 const repository = {
     name: 'FastAPI',
@@ -9,6 +10,14 @@ const repository = {
 }
 
 export function RespositoryList() {
+    const [repositories, setRepositories] = useState([]);
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/tvaditya/repos')
+            .then(response => response.json())
+            .then(data => setRepositories(data))
+    }, [repositories]);
+
     return (
         <section className="repository-list">
             <h1>Respository List</h1>
