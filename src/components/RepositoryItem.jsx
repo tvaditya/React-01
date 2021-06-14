@@ -3,7 +3,7 @@ export function RepositoryItem(props) {
         <li>
             <strong>{props.repository.name ?? 'Not defined'}</strong>
             <p>{props.repository.description}</p>
-            <a href={props.repository.link}>
+            <a href={props.repository.html_url}>
                 Access repository
             </a>
         </li>

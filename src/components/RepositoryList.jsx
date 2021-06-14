@@ -1,13 +1,8 @@
 import {RepositoryItem} from "./RepositoryItem";
-
-import '../styles/repositories.scss';
 import {useState, useEffect} from "react";
 
-const repository = {
-    name: 'FastAPI',
-    description: 'Learning FastApi',
-    link: "https://github.com/tvaditya/fastapiproject"
-}
+import '../styles/repositories.scss';
+
 
 export function RespositoryList() {
     const [repositories, setRepositories] = useState([]);
@@ -22,14 +17,9 @@ export function RespositoryList() {
         <section className="repository-list">
             <h1>Respository List</h1>
             <ul>
-                <RepositoryItem
-                    repository="FAstAPI"
-                    description="Learning FastAPI"
-                    link="https://github.com/tvaditya/fastapiproject" />
-                <RepositoryItem repository={repository}/>
-                <RepositoryItem repository={repository}/>
-                <RepositoryItem repository={repository}/>
-                <RepositoryItem repository={repository}/>
+                {repositories.map(repository => {
+                    return <RepositoryItem key={repository.name} repository={repository}/>
+                })}
             </ul>
         </section>
     )
